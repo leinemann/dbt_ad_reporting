@@ -5,11 +5,11 @@ config-version: 2
 require-dbt-version: [">=0.18.0", "<0.20.0"]
 
 vars:
-  ad_reporting__pinterest_enabled: true
+  ad_reporting__pinterest_enabled: false
   ad_reporting__microsoft_ads_enabled: true
   ad_reporting__linkedin_ads_enabled: true
   ad_reporting__google_ads_enabled: true
-  ad_reporting__twitter_ads_enabled: true
+  ad_reporting__twitter_ads_enabled: false
   ad_reporting__facebook_ads_enabled: true
 
 models:
@@ -17,9 +17,9 @@ models:
     +materialized: view
   
   pinterest:
-    enabled: true
+    enabled: false
   pinterest_source:
-    enabled: true
+    enabled: false
   
   microsoft_ads:
     enabled: true
@@ -32,9 +32,9 @@ models:
     enabled: true
   
   twitter_ads:
-    enabled: true
+    enabled: false
   twitter_ads_source:
-    enabled: true
+    enabled: false
   
   facebook_ads:
     enabled: true
