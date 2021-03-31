@@ -11,6 +11,14 @@ vars:
   ad_reporting__google_ads_enabled: true
   ad_reporting__twitter_ads_enabled: false
   ad_reporting__facebook_ads_enabled: true
+  microsoft_ads_schema: bingads
+  microsoft_ads_database: bingads
+  linkedin_schema: linkedin_ads
+  linkedin_database: linkedin_ads
+  facebook_ads_schema: facebook_ads
+  facebook_ads_database: facebook_ad_account
+  google_ads_schema: adwords
+  google_ads_database: adwords
 
 models:
   ad_reporting:
