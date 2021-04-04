@@ -47,4 +47,4 @@ models:
   google_ads:
     enabled: false
   google_ads_source:
-    enabled: false
+    enabled: true
