@@ -1,7 +1,8 @@
 name: 'ad_reporting'
 version: '1.0.0'
 config-version: 2
-profile: sustain-nonprod
+profile: 'sustain-nonprod-snowflake'
+
 require-dbt-version: [">=0.18.0", "<0.20.0"]
 
 vars:
@@ -10,47 +11,39 @@ vars:
   ad_reporting__linkedin_ads_enabled: true
   ad_reporting__google_ads_enabled: true
   ad_reporting__twitter_ads_enabled: false
-  ad_reporting__facebook_ads_enabled: true
-  microsoft_ads_schema: bingads
-  microsoft_ads_database: bingads
-  linkedin_schema: linkedin_ads
-  linkedin_database: linkedin_ads
-  facebook_ads_schema: facebook_ads
-  facebook_ads_database: facebook_ad_account
-  google_ads_schema: adwords
-  google_ads_database: adwords
+  ad_reporting__facebook_ads_enabled: false
 
 models:
   ad_reporting:
     +materialized: view
-  
+
   pinterest:
     enabled: false
   pinterest_source:
     enabled: false
-  
+
   microsoft_ads:
     enabled: true
   microsoft_ads_source:
     enabled: true
-  
+
   linkedin:
     enabled: true
   linkedin_source:
     enabled: true
-  
+
   twitter_ads:
     enabled: false
   twitter_ads_source:
     enabled: false
-  
+
   facebook_ads:
-    enabled: true
+    enabled: false
   facebook_ads_source:
-    enabled: true
+    enabled: false
   facebook_ads_creative_history:
-    enabled: true
-  
+    enabled: false
+
   google_ads:
     enabled: true
   google_ads_source:
