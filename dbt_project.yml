@@ -9,7 +9,7 @@ vars:
   ad_reporting__pinterest_enabled: false
   ad_reporting__microsoft_ads_enabled: true
   ad_reporting__linkedin_ads_enabled: true
-  ad_reporting__google_ads_enabled: false
+  ad_reporting__google_ads_enabled: true
   ad_reporting__twitter_ads_enabled: false
   ad_reporting__facebook_ads_enabled: false
 
@@ -45,6 +45,6 @@ models:
     enabled: false
 
   google_ads:
-    enabled: false
+    enabled: true
   google_ads_source:
-    enabled: false
+    enabled: true
