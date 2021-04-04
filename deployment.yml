@@ -15,7 +15,10 @@ jobs:
    targetName: dev # The name of the target that will be used when running the job. If it's not specified, the target will be named 'prod'.
    schedule: '*/15 * * * *' # The example will run every 30 minutes. Note that the cron string is quoted as otherwise it will be treated as invalid alias node (see https://yaml.org/spec/1.2/spec.html#*%20alias// for details)
    steps:
-     - name: run models # Give each step in your job a name. This will enable you to track the steps in the logs.
-       command: dbt run # Enter the dbt command that should run in this step. This example will run all your models. For a list of available commands visit https://docs.getdbt.com/reference/model-selection-syntax/.
+     - name: run dependencies
+       command: dbt deps
      - name: test models
        command: dbt test # This example will run all your tests.
+     - name: run models # Give each step in your job a name. This will enable you to track the steps in the logs.
+       command: dbt run # Enter the dbt command that should run in this step. This example will run all your models. For a list of available commands visit https://docs.getdbt.com/reference/model-selection-syntax/.
+
