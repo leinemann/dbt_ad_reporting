@@ -4,13 +4,12 @@
 dbtVersion: 0.19.0
 
 jobs:
- - name: every30minutes
-   targetName: dev # The name of the target that will be used when running the job. If it's not specified, the target will be named 'prod'.
-   schedule: '*/30 * * * *' # The example will run every 30 minutes. Note that the cron string is quoted as otherwise it will be treated as invalid alias node (see https://yaml.org/spec/1.2/spec.html#*%20alias// for details)
-   steps:
-     - name: version
-       command: dbt --version
-
+# - name: every30minutes
+#   targetName: dev # The name of the target that will be used when running the job. If it's not specified, the target will be named 'prod'.
+#   schedule: '*/30 * * * *' # The example will run every 30 minutes. Note that the cron string is quoted as otherwise it will be treated as invalid alias node (see https://yaml.org/spec/1.2/spec.html#*%20alias// for details)
+#   steps:
+#     - name: version
+#       command: dbt --version
  - name: every15minutes
    targetName: dev # The name of the target that will be used when running the job. If it's not specified, the target will be named 'prod'.
    schedule: '*/15 * * * *' # The example will run every 30 minutes. Note that the cron string is quoted as otherwise it will be treated as invalid alias node (see https://yaml.org/spec/1.2/spec.html#*%20alias// for details)
